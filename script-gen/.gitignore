@@ -5,3 +5,4 @@ output/mig/*
 !output/mig/temp
 output/info/*
 !output/info/temp
+src/app.js
