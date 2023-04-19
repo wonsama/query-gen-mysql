@@ -1,0 +1,10 @@
+# output 폴더 동기화 제외, temp 예외(폴더 유지용)
+output/ddl/*
+!output/ddl/temp
+output/mig/*
+!output/mig/temp
+output/info/*
+!output/info/temp
+src/app.js
+mock/*
+!mock/temp
