@@ -5,4 +5,6 @@ output/mig/*
 !output/mig/temp
 output/info/*
 !output/info/temp
+
+# 기타
 src/app.js

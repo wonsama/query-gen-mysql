@@ -16,4 +16,5 @@ export function readJson(path) {
  */
 export function write(path, msg) {
   fs.writeFileSync(path, msg, "utf8");
+  console.log(`created file : ${path}`);
 }

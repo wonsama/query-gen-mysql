@@ -9,6 +9,12 @@ export function readSql(id) {
   return fs.readFileSync(`./src/sql/${id}.sql`, 'utf8');
 }
 
+/**
+ * 파일을 생성한다.
+ * @param {string} path 파일경로
+ * @param {string} msg 작성할 내용
+ */
 export function write(path, msg) {
   fs.writeFileSync(path, msg);
+  console.log(`created file : ${path}`);
 }

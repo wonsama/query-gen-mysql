@@ -39,14 +39,20 @@ export function selTableDefault(tableName) {
   return execQuery(query, params);
 }
 
+export async function getListDesc(tableName) {
+  let list = await selTableList();
+  let desc = await selTableDesc(tableName);
+
+  return [list, desc];
+}
+
 /**
  * DDL 구문을 생성 해준다
  * @param {string} tableName 테이블명
  * @returns DDL 구문
  */
-export async function createDdl(tableName) {
-  let list = await selTableList();
-  let desc = await selTableDesc(tableName);
+export async function createDdl(list, desc, tableName) {
+  // list, desc 값은 getListDesc 를 사용하기 바랍니다.
 
   let comments = list
     .filter((x) => x.TABLE_NAME == tableName)
